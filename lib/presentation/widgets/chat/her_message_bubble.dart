@@ -12,7 +12,7 @@ class HerMessageBubble extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              color: colors.secondary, borderRadius: BorderRadius.circular(20)),
+              color: colors.secondary, borderRadius: BorderRadius.circular(10)),
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
@@ -22,9 +22,7 @@ class HerMessageBubble extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 5),
-
         _ImageBubble(),
-
         const SizedBox(height: 10),
       ],
     );
@@ -49,7 +47,7 @@ class _ImageBubble extends StatelessWidget {
             return Container(
               width: size.width * 0.7,
               height: 150,
-              padding: const EdgeInsets.symmetric( horizontal: 10, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: const Text('Mi amor está enviando una imagen'),
             );
           },
