@@ -34,16 +34,32 @@ class _ChatView extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-                child: ListView.builder(
-                    itemCount: 100,
-                    itemBuilder: (context, index) {
-                      return ( index % 2 == 0 )
+              child: ListView.builder(
+                  itemCount: 100,
+                  itemBuilder: (context, index) {
+                    return (index % 2 == 0)
                         ? const HerMessageBubble()
                         : const MyMessageBubble();
-                    })),
-
-            /// Caja de texto de mensajes
-            const MessageFieldBox(),
+                  }),
+            ),
+            Container(
+              //height: 70,
+              color: Colors.green.shade50,
+              child: const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 5,
+                    ),
+                    MessageFieldBox(),
+                    SizedBox(
+                      height: 5,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
