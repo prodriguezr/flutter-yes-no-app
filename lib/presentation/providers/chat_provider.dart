@@ -5,10 +5,7 @@ import 'package:yes_no_app/domain/entities/message.dart';
 class ChatProvider extends ChangeNotifier {
   final ScrollController scrollController = ScrollController();
 
-  List<Message> messageList = [
-    Message(text: 'Hola, amor', fromWho: FromWho.me),
-    Message(text: 'Ya estás en casa?', fromWho: FromWho.me),
-  ];
+  List<Message> messageList = [];
 
   Future<void> sendMessage(String text) async {
     if (text.isEmpty) return;
